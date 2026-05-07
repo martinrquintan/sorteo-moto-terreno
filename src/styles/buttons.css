@@ -1,0 +1,84 @@
+/* =====================================================
+   BUTTONS.CSS
+   Estilos de los botones reutilizables del formulario.
+   ===================================================== */
+
+/* ---- Botones de opción (Sí/No, Mañana/Tarde) ---- */
+.boton-opcion {
+  flex: 1;
+  min-width: 64px;
+  padding: 10px 14px;
+  background: var(--color-blanco);
+  border: 2px solid var(--color-rojo);
+  border-radius: var(--radio-boton);
+  color: var(--color-rojo);
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: box-shadow 0.15s ease, background-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.boton-opcion:hover:not(:disabled):not(.boton-opcion--seleccionado) {
+  box-shadow: var(--sombra-rojo-suave);
+}
+
+.boton-opcion--seleccionado {
+  background: var(--color-rojo);
+  color: var(--color-blanco);
+  box-shadow: var(--sombra-rojo-fuerte);
+}
+
+.boton-opcion:disabled {
+  border-color: var(--color-gris-deshabilitado);
+  color: var(--color-gris-deshabilitado);
+  background: var(--color-gris-fondo);
+  opacity: 0.7;
+}
+
+.boton-opcion__icono {
+  width: 18px;
+  height: 18px;
+}
+
+/* ---- Botón Enviar principal ---- */
+.boton-enviar {
+  width: 100%;
+  background: var(--color-blanco);
+  color: var(--color-rojo-oscuro);
+  font-weight: 800;
+  font-size: 22px;
+  letter-spacing: 2px;
+  padding: 18px var(--espacio-md);
+  border-radius: var(--radio-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--espacio-sm);
+  box-shadow: var(--sombra-rojo-fuerte);
+  transition: box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+.boton-enviar:hover:not(:disabled) {
+  background: var(--color-rojo-oscuro);
+  box-shadow: 0 8px 22px rgba(122, 10, 16, 0.5);
+}
+
+.boton-enviar:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.boton-enviar:disabled {
+  background: var(--color-gris-deshabilitado);
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.boton-enviar__icono {
+  width: 24px;
+  height: 24px;
+}
